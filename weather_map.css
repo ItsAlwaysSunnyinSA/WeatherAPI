@@ -82,6 +82,20 @@ h3 {
     height: 400px;
     background-color: deepskyblue;
 }
+
+#weather-submit {
+    margin-top: 10px;
+}
+
+input#lat-input.form-control {
+    width: 50%;
+    margin: 20px auto;
+}
+
+input#lon-input.form-control {
+    width:50%;
+    margin: 10px auto;
+}
 /*---------------*/
 /*FLOATING CLOUDS*/
 /*---------------*/

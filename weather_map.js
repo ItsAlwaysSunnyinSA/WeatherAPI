@@ -63,4 +63,12 @@ var callWeather = function () {
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
 
-
+    var marker = new google.maps.Marker({
+    position: {
+        lat: 29.42,
+        lng: -98.49
+    },
+    map: map,
+    draggable:true,
+    title:"Drag me!"
+    });
