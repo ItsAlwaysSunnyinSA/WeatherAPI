@@ -12,12 +12,12 @@ $.get("http://api.openweathermap.org/data/2.5/weather", {
     var icon = data.weather[0].icon;
     console.log(icon);
     var url = "http://openweathermap.org/img/w/" + icon + ".png";
-    var img = "<img src='" + url + "'>";
+    var img = "<img class='icon' src='" + url + "'>";
     console.log(img);
     // WEATHER BOXES
     // temperature (max/min)
     var presentWeather =
-        "<h1>" + Math.round(data.main.temp_max) + "°/" + Math.round(data.main.temp_min) + "°</h1>" +
+        "<h3>" + Math.round(data.main.temp_max) + "°/" + Math.round(data.main.temp_min) + "°</h3>" +
         img +
     //list for weather info
         "<ul>" +
