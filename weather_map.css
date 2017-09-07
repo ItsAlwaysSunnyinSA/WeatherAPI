@@ -304,6 +304,9 @@ div.sunholder {
     display: inline-block;
     animation: spin 8s linear 0s infinite;
     z-index: 1000;
+    position: relative;
+    bottom: 1450px;
+    right: 350px;
 }
 div.sun {
     display: block;
