@@ -4,13 +4,14 @@
 // })();
 
 
-var callWeather = function () {
+var callWeather = function (lat, lng) {
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: "14585416169d73d956f6321f3f0c5253",
-        lat: $("#lat-input").val(),
-        lon: $("#lon-input").val(),
+        lat: lat,
+            // $("#lat-input").val(),
+        lon: lng,
         units: "imperial",
-        cnt: 3
+        cnt: 6
     }).done(function (data) {
         console.log(data);
         console.log($("#lat-input").val());
@@ -48,6 +49,8 @@ var callWeather = function () {
 
     };
 
+//callWeather($("#lon-input").val(),$("#lat-input").val(),)
+
     $("#weather-submit").click(callWeather);
 
     var mapOptions = {
@@ -72,3 +75,12 @@ var callWeather = function () {
     draggable:true,
     title:"Drag me!"
     });
+
+google.maps.event.addListener(marker, "dragend", function(event) {
+
+    var lat = event.latLng.lat();
+    var lng = event.latLng.lng();
+    callWeather(lat, lng);
+    console.log(event);
+
+});

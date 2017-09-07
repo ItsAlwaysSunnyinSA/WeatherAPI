@@ -67,6 +67,11 @@ h3 {
     bottom: 375px;
 }
 
+#form {
+    position: relative;
+    top: 20px;
+}
+
 .weather {
     width: 30%;
     height: 250px;
