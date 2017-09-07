@@ -1,0 +1,35 @@
+/*------------------------
+
+     COLORS
+
+------------------------*/
+
+/*
+
+    light-grey : #F2F2F2
+
+
+
+*/
+
+
+
+
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 700px;
+    height: 700px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.weather {
+    height: 200px;
+    width: 30%;
+    background-color: #F2F2F2;
+    border: 1px solid black;
+    margin: 10px;
+}

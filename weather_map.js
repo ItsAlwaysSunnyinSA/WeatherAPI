@@ -10,3 +10,4 @@ $.get("http://api.openweathermap.org/data/2.5/weather", {
 }).done(function(data){
     console.log(data);
 });
+
