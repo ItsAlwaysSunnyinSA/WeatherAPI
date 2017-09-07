@@ -26,6 +26,10 @@ li {
     padding: 2px;
 }
 
+h3 {
+    color: #5f5f5f;
+}
+
 
 #container {
     display: flex;
