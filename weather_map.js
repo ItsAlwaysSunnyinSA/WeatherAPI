@@ -9,5 +9,21 @@ $.get("http://api.openweathermap.org/data/2.5/weather", {
     units: "imperial"
 }).done(function(data){
     console.log(data);
+
+    // WEATHER BOXES
+    // temperature (max/min)
+    var presentWeather =
+        "<h1>" + Math.round(data.main.temp_max) + "°/" + Math.round(data.main.temp_min) + "°</h1>";
+    // icon
+
+    // clouds
+
+    // humidity
+
+    // wind
+
+    //pressure
+
+    $("#present").append(presentWeather);
 });
 
