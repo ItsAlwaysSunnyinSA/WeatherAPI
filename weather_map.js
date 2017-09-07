@@ -3,7 +3,7 @@
 // (function(){
 // })();
 
-$.get("http://api.openweathermap.org/data/2.5/forecast/?lat=29.42.42&lon=-98.49", {
+$.get("http://api.openweathermap.org/data/2.5/forecast/?lat=29.42&lon=-98.49", {
     APPID: "14585416169d73d956f6321f3f0c5253",
     q: "San Antonio, TX",
     units: "imperial",
@@ -41,5 +41,15 @@ $.get("http://api.openweathermap.org/data/2.5/forecast/?lat=29.42.42&lon=-98.49"
 
 });
 
+var mapOptions = {
 
+    zoom: 5,
+
+    center: {
+        lat: 29.42,
+        lng: -98.49
+    }
+};
+
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
