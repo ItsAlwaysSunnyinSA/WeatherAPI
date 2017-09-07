@@ -9,12 +9,16 @@ $.get("http://api.openweathermap.org/data/2.5/weather", {
     units: "imperial"
 }).done(function(data){
     console.log(data);
-
+    var icon = data.weather[0].icon;
+    console.log(icon);
+    var url = "http://openweathermap.org/img/w/" + icon + ".png";
+    var img = "<img src='" + url + "'>";
+    console.log(img);
     // WEATHER BOXES
     // temperature (max/min)
     var presentWeather =
         "<h1>" + Math.round(data.main.temp_max) + "°/" + Math.round(data.main.temp_min) + "°</h1>" +
-        data.weather[0].icon +
+        img +
     //list for weather info
         "<ul>" +
         "<li><strong>Humidity</strong>: " + data.main.humidity + "%</li>" +
