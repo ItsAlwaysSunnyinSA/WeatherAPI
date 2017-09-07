@@ -11,39 +11,29 @@ $.get("http://api.openweathermap.org/data/2.5/forecast/?lat=29.42.42&lon=-98.49"
 }).done(function(data){
     console.log(data);
     // WEATHER BOXES
-    // temperature (max/min)
 
-        data.forEach(function(daily, index){
-            var presentWeather = "";
+    (data.list).forEach(function(daily){
+            var weather = "";
 
-            var icon = data.list[index].weather[0].icon;
+            var icon = daily.weather[0].icon;
             console.log(icon);
             var url = "http://openweathermap.org/img/w/" + icon + ".png";
             var img = "<img class='icon' src='" + url + "'>";
             console.log(img);
 
-            presentWeather =+
+            weather =
 
-            "<h3>" + Math.round(data.list[index].main.temp_max) + "°/" + Math.round(data.list[index].main.temp_min) + "°</h3>" +
+            "<h3>" + Math.round(daily.main.temp_max) + "°/" + Math.round(daily.main.temp_min) + "°</h3>" +
              img +
             //list for weather info
             "<ul>" +
-            "<li><strong>Humidity</strong>: " + data.list[index].main.humidity + "%</li>" +
-            "<li><strong>Wind</strong>: " + Math.round(data.list[index].wind.speed) + " mph</li>" +
-            "<li><strong>Pressure</strong>: " + data.list[index].main.pressure + " hPa</li>" +
-            "</ul>";
+            "<li><strong>Humidity</strong>: " + daily.main.humidity + "%</li>" +
+            "<li><strong>Wind</strong>: " + Math.round(daily.wind.speed) + " mph</li>" +
+            "<li><strong>Pressure</strong>: " + daily.main.pressure + " hPa</li>" +
+            "</ul>" + weather;
 
-            $("#present").append(presentWeather);
+            $("#present").append(weather);
         });
-
-    // icon
-
-    // clouds
-
-    // humidity
-    // wind
-
-    //pressure
 
 });
 
