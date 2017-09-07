@@ -13,13 +13,19 @@ $.get("http://api.openweathermap.org/data/2.5/weather", {
     // WEATHER BOXES
     // temperature (max/min)
     var presentWeather =
-        "<h1>" + Math.round(data.main.temp_max) + "°/" + Math.round(data.main.temp_min) + "°</h1>";
+        "<h1>" + Math.round(data.main.temp_max) + "°/" + Math.round(data.main.temp_min) + "°</h1>" +
+        data.weather[0].icon +
+    //list for weather info
+        "<ul>" +
+        "<li><strong>Humidity</strong>: " + data.main.humidity + "%</li>" +
+        "<li><strong>Wind</strong>: " + Math.round(data.wind.speed) + " mph</li>" +
+        "<li><strong>Pressure</strong>: " + data.main.pressure + " hPa</li>" +
+        "</ul>";
     // icon
 
     // clouds
 
     // humidity
-
     // wind
 
     //pressure
