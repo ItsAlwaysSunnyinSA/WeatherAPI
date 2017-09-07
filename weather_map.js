@@ -3,10 +3,11 @@
 // (function(){
 // })();
 
-$.get("http://api.openweathermap.org/data/2.5/weather", {
+$.get("http://api.openweathermap.org/data/2.5/forecast?lat=29.42.42&lon=-98.49", {
     APPID: "14585416169d73d956f6321f3f0c5253",
     q: "San Antonio, TX",
-    units: "imperial"
+    units: "imperial",
+    cnt: 3
 }).done(function(data){
     console.log(data);
     var icon = data.weather[0].icon;
