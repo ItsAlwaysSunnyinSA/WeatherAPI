@@ -19,7 +19,12 @@ body {
     overflow: hidden;
     height: 500px;
     margin: 0;
+    margin-top: 50px;
+    text-align: center;
+}
 
+h1, h3 {
+    font-family: 'Pacifico', cursive;
 }
 
 ul {
@@ -40,6 +45,7 @@ h3 {
 .container {
     width: 100%;
     position: relative;
+    bottom: 175px;
     height: 400px;
     overflow: hidden;
     margin: 0 auto;
@@ -57,7 +63,7 @@ h3 {
     border-radius: 5px;
     z-index: 100;
     position: relative;
-    bottom: 300px;
+    bottom: 375px;
 }
 
 .weather {
@@ -271,4 +277,63 @@ h3 {
     -webkit-box-shadow: 0px 0px 20px 5px #00f1ee;
 }
 
+/*SUN*/
 
+div.sunholder {
+    display: inline-block;
+    animation: spin 8s linear 0s infinite;
+    z-index: 1000;
+}
+div.sun {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+div.raybase {
+    position: absolute;
+    top: 19px; /*50px/2-6px*/
+    left: 19px; /*(50px-12px)/2*/
+}
+div.ray {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 12px solid yellow;
+    animation: shine 1s linear 0s infinite alternate;
+}
+div.ray1 {
+    transform: translate(28px,0px); /*(50px+6px)/2*/
+}
+div.ray2 {
+    transform: rotate(45deg) translate(28px,0px) ;
+}
+div.ray3 {
+    transform: rotate(90deg) translate(28px,0px) ;
+}
+div.ray4 {
+    transform: rotate(135deg) translate(28px,0px) ;
+}
+div.ray5 {
+    transform: rotate(180deg) translate(28px,0px) ;
+}
+div.ray6 {
+    transform: rotate(225deg) translate(28px,0px) ;
+}
+div.ray7 {
+    transform: rotate(270deg) translate(28px,0px) ;
+}
+div.ray8 {
+    transform: rotate(315deg) translate(28px,0px) ;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes shine {
+    from { transform: translate(0px,0px) }
+    to { transform: translate(5px,0px) }
+}
